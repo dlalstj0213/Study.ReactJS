@@ -59,35 +59,35 @@
     yarn -v
     ```
 
-- ✔ **BABEL**
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/babel.svg"/>
 
+- ✔ **BABEL**
   - JavaScript transcompiler
   - 배포할때 ECMAScript 2015+ 버전의 자바스크립트 문법을 예전 버전으로 변환해준다.
   - TypeScript, JSX 등 순수 자바스크립트 언어가 아닌 것을 자바스크립트로 변환해준다.
 
-- ✔ **Webpack**
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/webpack.svg"/>
 
+- ✔ **Webpack**
   - Bundling the code, JavaScript module bundler
   - 작성한 소스 코드나 리소스, 이미지 등 한번에 묶어서 번들 단위로 사용자에게 제공해준다.
   - 소스를 간편화 하고 긴 변수나 함수들을 해커나 다른 사람이 알아보지 못하도록 도와준다.
   
-- ✔ **ESLint**
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/eslint.svg"/>
 
+- ✔ **ESLint**
   - checking code
   - 즉각적으로 잘못된 코드를 알려준다.
 
-- ✔ **Jest**
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/jest.svg"/>
 
+- ✔ **Jest**
   - unit testing framework
   - 유닛 테스팅을 도와주는 테스팅 프레임워크다.
 
-- ✔ **PostCSS**
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/postcss.svg"/>
 
+- ✔ **PostCSS**
   - expandable CSS library (tool for transforming CSS with JavaScript)
   - 제공되는 framework에 맞게 CSS를 작성하면 브라우저가 이해할 수 있게 CSS로 변환해준다.
   - 다양한 플러그인을 통해 원하는 것을 추가적으로 작업이 가능하다.
