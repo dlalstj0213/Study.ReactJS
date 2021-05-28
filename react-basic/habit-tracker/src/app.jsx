@@ -36,7 +36,12 @@ class App extends Component {
 				this.setState({ habits: habits });
 			},
 			handleAdd: (name) => {
-				const habits = [...this.state.habits]; // Separate operator
+				//const habits = [...this.state.habits, {id : Date.now(), name: name, count: 0}]; // Separate operator
+				const habits = [
+					...this.state.habits,
+					{ id: Date.now(), name, count: 0 },
+				]; // 동일한 name 생략가능
+				this.setState({ habits });
 			},
 		},
 	};
