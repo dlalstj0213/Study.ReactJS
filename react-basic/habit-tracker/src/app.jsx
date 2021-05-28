@@ -11,6 +11,10 @@ class App extends Component {
 			{ name: 'Coding', count: 0, id: 'habit_3' },
 		],
 		events: {
+			/**
+			 * 카운트 증가
+			 * @param {*} habit
+			 */
 			handleIncrement: (habit) => {
 				/*
         // state 오브젝트를 직접적으로 수정하는건 좋지않다 !!!
@@ -24,6 +28,10 @@ class App extends Component {
 				//this.setState({ habits: habits });
 				this.setState({ habits });
 			},
+			/**
+			 * 카운트 감소
+			 * @param {*} habit
+			 */
 			handleDecrement: (habit) => {
 				const habits = [...this.state.habits];
 				const index = habits.indexOf(habit);
@@ -31,16 +39,34 @@ class App extends Component {
 				habits[index].count = count < 0 ? 0 : count;
 				this.setState({ habits: habits });
 			},
+			/**
+			 * habit 삭제
+			 * @param {*} habit
+			 */
 			handleDelete: (habit) => {
 				const habits = this.state.habits.filter((item) => item.id !== habit.id);
 				this.setState({ habits: habits });
 			},
+			/**
+			 * habit 추가
+			 * @param {*} name
+			 */
 			handleAdd: (name) => {
 				//const habits = [...this.state.habits, {id : Date.now(), name: name, count: 0}]; // Separate operator
 				const habits = [
 					...this.state.habits,
 					{ id: Date.now(), name, count: 0 },
 				]; // 동일한 name 생략가능
+				this.setState({ habits });
+			},
+			/**
+			 * 카운트 리셋
+			 */
+			handleReset: () => {
+				const habits = this.state.habits.map((habit) => {
+					habit.count = 0;
+					return habit;
+				});
 				this.setState({ habits });
 			},
 		},
