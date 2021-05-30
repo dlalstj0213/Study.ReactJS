@@ -30,6 +30,7 @@ button {
 	outline: none;
 	border: 0;
 	cursor: pointer;
+	margin: 0.1em;
 }
 
 .add-input {
@@ -86,6 +87,13 @@ button {
 }
 
 .habits-reset {
+	font-size: 1.5rem;
+	padding: 0.2em 1em;
+	background-color: green;
+	color: white;
+}
+
+.habits-clear {
 	font-size: 1.5rem;
 	padding: 0.2em 1em;
 	background-color: green;

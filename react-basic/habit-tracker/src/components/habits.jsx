@@ -36,6 +36,12 @@ class Habits extends Component {
 				>
 					Reset All
 				</button>
+				<button
+					className="habits-clear"
+					onClick={this.props.events.handleClearAll}
+				>
+					Clear All
+				</button>
 			</>
 		);
 	}

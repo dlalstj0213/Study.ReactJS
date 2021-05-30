@@ -69,6 +69,10 @@ class App extends Component {
 				});
 				this.setState({ habits });
 			},
+			handleClearAll: () => {
+				const habits = this.state.habits.filter((item) => false);
+				this.setState({ habits: habits });
+			},
 		},
 	};
 
