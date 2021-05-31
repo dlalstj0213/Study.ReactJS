@@ -22,7 +22,7 @@ class Habit extends Component {
 		// const habitName = this.props.habit.name;
 		// const habitCount = this.props.habit.count;
 		const { name, count } = this.props.habit;
-
+		console.log(this.props.habit.id);
 		return (
 			<li className="habit">
 				<span className="habit-name">{name}</span>

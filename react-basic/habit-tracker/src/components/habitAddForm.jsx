@@ -15,6 +15,7 @@ class HabitAddForm extends Component {
 	};
 
 	render() {
+		console.log('HabitForm');
 		return (
 			<form
 				ref={this.formRef}
