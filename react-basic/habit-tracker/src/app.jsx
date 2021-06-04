@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isElementOfType } from 'react-dom/test-utils';
 import './app.css';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
@@ -21,11 +22,21 @@ class App extends Component {
 				habit.count++;
 				this.setState(this.state);
         */
+				/*
 				const habits = [...this.state.habits]; // 새로운 배열에 복사
 				const index = habits.indexOf(habit);
 				habits[index].count++;
 				// key와 value 이름이 똑같으면 하나로 생략가능
 				//this.setState({ habits: habits });
+				this.setState({ habits });
+				*/
+				// 2021-06-04 PureComponent와 Shallow Comparison으로 인한 오류 해결 코드
+				const habits = this.state.habits.map((item) => {
+					if (item.id === habit.id) {
+						return { ...item, count: item.count + 1 }; //deconstructing objectg
+					}
+					return item;
+				});
 				this.setState({ habits });
 			},
 			/**
@@ -33,11 +44,22 @@ class App extends Component {
 			 * @param {*} habit
 			 */
 			handleDecrement: (habit) => {
+				/*
 				const habits = [...this.state.habits];
 				const index = habits.indexOf(habit);
 				const count = habits[index].count - 1;
 				habits[index].count = count < 0 ? 0 : count;
 				this.setState({ habits: habits });
+				*/
+				// 2021-06-04 PureComponent와 Shallow Comparison으로 인한 오류 해결 코드
+				const habits = this.state.habits.map((item) => {
+					if (item.id === habit.id) {
+						const count = habit.count - 1;
+						return { ...habit, count: count < 0 ? 0 : count };
+					}
+					return item;
+				});
+				this.setState({ habits });
 			},
 			/**
 			 * habit 삭제
@@ -63,9 +85,19 @@ class App extends Component {
 			 * 카운트 리셋
 			 */
 			handleReset: () => {
+				/*
 				const habits = this.state.habits.map((habit) => {
 					habit.count = 0;
 					return habit;
+				});
+				this.setState({ habits });
+				*/
+				// 2021-06-04 PureComponent와 Shallow Comparison으로 인한 오류 해결 코드
+				const habits = this.state.habits.map((item) => {
+					if (item.count !== 0) {
+						return { ...item, count: 0 };
+					}
+					return item;
 				});
 				this.setState({ habits });
 			},

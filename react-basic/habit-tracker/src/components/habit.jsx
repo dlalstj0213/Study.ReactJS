@@ -11,7 +11,6 @@ class Habit extends PureComponent {
 	 */
 	componentDidMount(e) {
 		console.log(`habit : ${this.props.habit.name} mounted`);
-		console.log(e);
 	}
 	/**
 	 * Lifecycle Methods
@@ -19,7 +18,6 @@ class Habit extends PureComponent {
 	 */
 	componentWillUnmount(e) {
 		console.log(`habit : ${this.props.habit.name} will unmount`);
-		console.log(e);
 	}
 
 	handleIncrement = () => {

@@ -1,28 +1,12 @@
 import React, { Component } from 'react';
 import Habit from './habit';
-import HabitAddForm from './habitAddForm';
+import HabitAddForm from './habitAddForm_20210604';
 
 class Habits extends Component {
-	handleIncrement = (habit) => {
-		this.props.events.handleIncrement(habit);
-	};
-
-	handleDecrement = (habit) => {
-		this.props.events.handleDecrement(habit);
-	};
-
-	handleDelete = (habit) => {
-		this.props.events.handleDelete(habit);
-	};
-
-	handleAdd = (name) => {
-		this.props.events.onAdd(name);
-	};
-
 	render() {
 		console.log('habits');
 		return (
-			<>
+			<div>
 				<HabitAddForm onAdd={this.props.events.handleAdd} />
 				<ul>
 					{this.props.habits.map((habit) => {
@@ -43,7 +27,7 @@ class Habits extends Component {
 				>
 					Clear All
 				</button>
-			</>
+			</div>
 		);
 	}
 }
