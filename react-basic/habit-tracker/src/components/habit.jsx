@@ -1,9 +1,26 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 //yarn add @fortawesome/fontawesome-free
-class Habit extends Component {
+class Habit extends PureComponent {
 	// handleIncrement = (event) => {
 	//   console.log(event);
 	// };
+
+	/**
+	 * Lifecycle Methods
+	 * Habit 컴포넌트가 올라왔을때(생성될때)
+	 */
+	componentDidMount(e) {
+		console.log(`habit : ${this.props.habit.name} mounted`);
+		console.log(e);
+	}
+	/**
+	 * Lifecycle Methods
+	 * Habit 컴포넌트가 내려갔을때(없어질때)
+	 */
+	componentWillUnmount(e) {
+		console.log(`habit : ${this.props.habit.name} will unmount`);
+		console.log(e);
+	}
 
 	handleIncrement = () => {
 		this.props.events.handleIncrement(this.props.habit);
