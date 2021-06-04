@@ -20,7 +20,6 @@ class App extends Component {
 				/*
         // state 오브젝트를 직접적으로 수정하는건 좋지않다 !!!
 				habit.count++;
-				this.setState(this.state);
         */
 				/*
 				const habits = [...this.state.habits]; // 새로운 배열에 복사
