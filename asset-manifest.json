@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Study.React_DreamCoding/react-basic/habit-tracker/static/css/main.569d3d7c.chunk.css",
+    "main.js": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/main.042f9091.chunk.js",
+    "main.js.map": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/main.042f9091.chunk.js.map",
+    "runtime-main.js": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/runtime-main.7b67b878.js",
+    "runtime-main.js.map": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/runtime-main.7b67b878.js.map",
+    "static/js/2.33c79bc9.chunk.js": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/2.33c79bc9.chunk.js",
+    "static/js/2.33c79bc9.chunk.js.map": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/2.33c79bc9.chunk.js.map",
+    "index.html": "/Study.React_DreamCoding/react-basic/habit-tracker/index.html",
+    "static/css/main.569d3d7c.chunk.css.map": "/Study.React_DreamCoding/react-basic/habit-tracker/static/css/main.569d3d7c.chunk.css.map",
+    "static/js/2.33c79bc9.chunk.js.LICENSE.txt": "/Study.React_DreamCoding/react-basic/habit-tracker/static/js/2.33c79bc9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b67b878.js",
+    "static/js/2.33c79bc9.chunk.js",
+    "static/css/main.569d3d7c.chunk.css",
+    "static/js/main.042f9091.chunk.js"
+  ]
+}
