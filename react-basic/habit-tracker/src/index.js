@@ -12,10 +12,10 @@ ReactDOM.render(
 	/**
 	 * Class, PureComponent, function Component, memo
 	 */
-	//<App />,
+	<App />,
 	/**
 	 * React Hook
 	 */
-	<SimpleHabit></SimpleHabit>,
+	//<SimpleHabit></SimpleHabit>,
 	document.getElementById('root')
 );
