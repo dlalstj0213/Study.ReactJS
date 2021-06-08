@@ -1,8 +1,8 @@
-# Basic start React
+# Start React-Basic
 
 ## React 프로젝트 생성
 
-### 간단한 커맨드로 react template 만들기
+### ✔ 간단한 커맨드로 react template 만들기
 
 ```
 $ yarn create react app [프로젝트명]
@@ -14,7 +14,7 @@ $ yarn create react app [프로젝트명]
 
 현재 깃에 올라와 있는 template 폴더안에는 불필요한 소스를 제거해 두었다.
 
-### template 폴더를 다른 폴더명으로 복사하기
+### ✔ template 폴더를 다른 폴더명으로 복사하기
 
 ```
 $ cp -R [복사할파일명] [복사된파일명]
@@ -23,7 +23,7 @@ $ cp -R [복사할파일명] [복사된파일명]
 
 `$ cp -R template postCSS-basic`
 
-### 실행
+### ✔ 실행
 
 ```
 $ yarn start
