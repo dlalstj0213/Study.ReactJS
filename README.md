@@ -59,6 +59,22 @@
     yarn -v
     ```
 
+- **npm** ❓
+  - npm is a **package manager**
+  - npm을 사용하면 라이브러리 또는 패키지를 쉽게 관리할 수 있다.
+  - 라이브러리 설치, 버전 업데이트, 삭제 가능
+
+- **npx** ❓
+  - npx is a tool for **executing packages**
+  - npx는 npm과 다르게 설치하는 것이 아니라 원하는 라이브러리를 실행할 수 있게 도와
+주는 툴이다.
+
+- **yarn** ❓
+  - yarn is a **package manager** by facebook
+  - npm에서 부족했던 부분인 버전관리, 성능, 보안문제 등을 보완하기 위한 페이스북에서 만든 새로운 패키지매니저이다.
+  - 하지만 그렇다고 완전히 새로운 패키지 매니저가 아니다. yarn 또한 npm 위에서 작동하는 툴이기 때문에 npm에서 쓰는 package.json 파일을 유지하고 npm과 호환가능하게 사용이 가능하다.
+
+
 <img height="40" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/babel.svg"/>
 
 - ✔ **BABEL**
