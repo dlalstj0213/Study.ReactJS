@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './app.css';
+import styles from './css/app.module.css';
 import * as Com from './js/common';
 import data from './json/apiKeys.json'; //json 파일 불러오기
-import Navbar from './components/navbar';
 import VideoList from './components/video_list/video_list';
+import SearchHeader from './components/search_header/search_header';
 
 function App() {
 	const [videos, setVideos] = useState([]);
@@ -32,10 +32,10 @@ function App() {
 	}, []);
 
 	return (
-		<>
-			<Navbar />
+		<div className={styles.app}>
+			<SearchHeader />
 			<VideoList videos={videos} />
-		</>
+		</div>
 	);
 }
 
