@@ -1,16 +1,40 @@
 import styles from '../../css/header/search_header.module.css';
 
-import React from 'react';
+import React, { useRef } from 'react';
 
-const SearchHeader = (props) => {
+const SearchHeader = ({ onSearch }) => {
+	const inputRef = useRef();
+
+	const handleSearch = () => {
+		const value = inputRef.current.value;
+		onSearch(value);
+	};
+
+	const onClick = (e) => {
+		//console.log(e);
+		handleSearch();
+	};
+	const onKeyPress = (e) => {
+		//console.log(e);
+		if (e.key === 'Enter') {
+			handleSearch();
+		}
+	};
+
 	return (
 		<header className={styles.header}>
 			<div className={styles.logo}>
 				<img className={styles.img} src="/images/youtube_play.png" alt="logo" />
 				<h1 className={styles.title}>Youtube</h1>
 			</div>
-			<input className={styles.input} type="search" placeholder="Search..." />
-			<button className={styles.button} type="submit">
+			<input
+				ref={inputRef}
+				className={styles.input}
+				type="search"
+				placeholder="Search..."
+				onKeyPress={onKeyPress}
+			/>
+			<button className={styles.button} type="submit" onClick={onClick}>
 				<i className="fas fa-search"></i>
 			</button>
 		</header>
