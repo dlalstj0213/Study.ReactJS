@@ -23,7 +23,7 @@ function App({ youtube }) {
 	useEffect(() => {
 		youtube
 			.mostPopular() //
-			.then(console.log);
+			.then((videos) => setVideos(videos));
 	}, []);
 
 	return (
