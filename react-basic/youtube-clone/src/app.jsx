@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './css/app.module.css';
 //import * as Com from './js/common';
 import VideoList from './components/video_list/video_list';
@@ -13,11 +13,20 @@ function App({ youtube }) {
 		setSelectedVideo(video);
 	};
 
-	const search = (query) => {
-		youtube
-			.search(query) //
-			.then((videos) => setVideos(videos));
-	};
+	/**
+	 * useCallback을 조심해서 사용하자!
+	 * useCallback은 한 번 선언되면 메모리상 계속 존재하기 때문에 메모리 비용이 발생한다.
+	 * 그러니 정말 필요할 때에만 사용해야한다는 것을 잊지말자
+	 */
+	const search = useCallback(
+		(query) => {
+			setSelectedVideo(null);
+			youtube
+				.search(query) //
+				.then((videos) => setVideos(videos));
+		},
+		[youtube]
+	);
 
 	/*
 	// 외부 js 파일의 함수 불러오기
@@ -30,7 +39,7 @@ function App({ youtube }) {
 		youtube
 			.mostPopular() //
 			.then((videos) => setVideos(videos));
-	}, []);
+	}, [youtube]);
 
 	return (
 		<div className={styles.app}>

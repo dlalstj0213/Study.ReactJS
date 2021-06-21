@@ -4,6 +4,7 @@ import styles from '../../css/video/video_detail.module.css';
 const VideoDetail = ({ video, video: { snippet } }) => (
 	<section className={styles.detail}>
 		<iframe
+			title="yotube video player"
 			className={styles.video}
 			type="text/html"
 			width="100%"
