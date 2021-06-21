@@ -4,14 +4,16 @@ import './index.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import App from './app';
 import Youtube from './service/youtube';
-import axios from 'axios';
+import axios from 'axios'; //Axios 라이브러리 임포트
 //import data from './json/apiKeys.json'; //json 파일 불러오기
 
 const httpClient = axios.create({
 	baseURL: 'https://www.googleapis.com/youtube/v3',
-	param: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
+	params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
 });
+
 const youtube = new Youtube(httpClient);
+
 ReactDOM.render(
 	<React.StrictMode>
 		<App youtube={youtube} />
