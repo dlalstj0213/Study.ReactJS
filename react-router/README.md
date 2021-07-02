@@ -3,7 +3,7 @@
 리액트는 SPA(싱글 페이지 어플리케이션)을 쉽게 만들 수 있는 라이브러리이다.
 또한 React는 **CSR (Client Side Renderging) 방식**으로 SPA(싱글 페이지 어플리케이션)를 만들 수 있다. 
 
-(React 프레임워크 -> Nest.js)
+(React 프레임워크 -> Next.js)
 
 ## Single Page Application
 
