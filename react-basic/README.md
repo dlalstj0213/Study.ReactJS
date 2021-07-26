@@ -5,12 +5,12 @@
 ### ✔ 간단한 커맨드로 react template 만들기
 
 ```
-$ yarn create react app [프로젝트명]
+$ yarn create react-app [프로젝트명]
 ```
 
-`$ yarn create react app template`
+`$ yarn create react-app template`
 
-커맨드로 `create react app` 툴을 이용하면 실전 프로젝트에 필요없는 소스도 같이 만들어진다.
+커맨드로 `create react-app` 툴을 이용하면 실전 프로젝트에 필요없는 소스도 같이 만들어진다.
 
 현재 깃에 올라와 있는 template 폴더안에는 불필요한 소스를 제거해 두었다.
 
